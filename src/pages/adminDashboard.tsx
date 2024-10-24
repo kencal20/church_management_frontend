@@ -1,33 +1,25 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-type Props = {}
+type Props = {};
 
-export default function AdminDashboard({ }: Props) {
+export default function AdminDashboard({}: Props) {
   return (
-    <div>
-      <h1>adminDashboard</h1>
+    <div className="container text-center my-5">
+      <h1>Admin Dashboard</h1>
       <br />
-      <div
-        style={{
-          display: "flex", flexDirection: "column",alignItems:"center"
-        }}>
-        <Link to={'/admin/signup'}
+      <div className="d-flex flex-column align-items-center">
+        <Link
+          to={'/admin/signup'}
+          className="btn btn-dark rounded-circle text-white d-flex justify-content-center align-items-center"
           style={{
-            backgroundColor: "black",
-            padding: "10px",
-            borderRadius: "60px",
-            textAlign: "center",
-            color: "white",
-            width: "5vw",
-            height:"11vh",
-            fontSize: "20px",
-            textDecoration: "none",
-            display:"flex",
-            justifyContent:"center",
-            alignItems:"center"
-          }}>
-          +</Link>
+            width: "60px",
+            height: "60px",
+            fontSize: "24px",
+          }}
+        >
+          +
+        </Link>
       </div>
     </div>
-  )
+  );
 }
